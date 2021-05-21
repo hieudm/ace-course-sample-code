@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://demows" xmlns:Q1="http://test/test" xmlns:tns="http://demows">
+    <xsd:import namespace="http://test/test" schemaLocation="test/test/test.xsd"/>
+    <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="dbquery">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="customerid" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="dbqueryResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="Q1:coffeeshop"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="add">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="custid" nillable="true" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+    <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="addResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Q1:coffeeshop"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

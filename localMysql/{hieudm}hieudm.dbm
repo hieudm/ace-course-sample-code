@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore" xmlns:SQLTables="http:///org/eclipse/datatools/modelbase/sql/tables.ecore">
+  <SQLSchema:Database xmi:id="_-jELgI0CEemMRMEnnNEWIQ" name="{hieudm}:hieudm" vendor="MySql" version="5.1" schemas="_-jMHUI0CEemMRMEnnNEWIQ">
+    <eAnnotations xmi:id="_-jELgY0CEemMRMEnnNEWIQ" source="ConnectionURI">
+      <details xmi:id="_-jELgo0CEemMRMEnnNEWIQ" key="ConnectionKey" value="hieudm"/>
+    </eAnnotations>
+  </SQLSchema:Database>
+  <SQLSchema:Schema xmi:id="_-jMHUI0CEemMRMEnnNEWIQ" name="hieudm" indices="_-jMHUY0CEemMRMEnnNEWIQ _-jMuZ40CEemMRMEnnNEWIQ" tables="_-jN8gI0CEemMRMEnnNEWIQ _-jN8jo0CEemMRMEnnNEWIQ _-jMuYI0CEemMRMEnnNEWIQ _-jMuaY0CEemMRMEnnNEWIQ" database="_-jELgI0CEemMRMEnnNEWIQ"/>
+  <SQLConstraints:Index xmi:id="_-jMHUY0CEemMRMEnnNEWIQ" name="password_resets_email_index" Schema="_-jMHUI0CEemMRMEnnNEWIQ" table="_-jMuYI0CEemMRMEnnNEWIQ">
+    <members xmi:id="_-jMHUo0CEemMRMEnnNEWIQ" column="_-jMuYY0CEemMRMEnnNEWIQ"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="_-jMuYI0CEemMRMEnnNEWIQ" name="password_resets" schema="_-jMHUI0CEemMRMEnnNEWIQ" index="_-jMHUY0CEemMRMEnnNEWIQ">
+    <columns xmi:id="_-jMuYY0CEemMRMEnnNEWIQ" name="email" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-jMuYo0CEemMRMEnnNEWIQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="191"/>
+    </columns>
+    <columns xmi:id="_-jMuY40CEemMRMEnnNEWIQ" name="token" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-jMuZI0CEemMRMEnnNEWIQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="191"/>
+    </columns>
+    <columns xmi:id="_-jMuZY0CEemMRMEnnNEWIQ" name="created_at" description="">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_-jMuZo0CEemMRMEnnNEWIQ" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+  </SQLTables:PersistentTable>
+  <SQLConstraints:Index xmi:id="_-jMuZ40CEemMRMEnnNEWIQ" name="users_email_unique" Schema="_-jMHUI0CEemMRMEnnNEWIQ" unique="true" table="_-jMuaY0CEemMRMEnnNEWIQ">
+    <members xmi:id="_-jMuaI0CEemMRMEnnNEWIQ" column="_-jMubo0CEemMRMEnnNEWIQ"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="_-jMuaY0CEemMRMEnnNEWIQ" name="users" schema="_-jMHUI0CEemMRMEnnNEWIQ" index="_-jMuZ40CEemMRMEnnNEWIQ">
+    <columns xmi:id="_-jMuao0CEemMRMEnnNEWIQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_-jMua40CEemMRMEnnNEWIQ" name="BIGINT UNSIGNED" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="_-jMubI0CEemMRMEnnNEWIQ" name="name" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-jMubY0CEemMRMEnnNEWIQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="191"/>
+    </columns>
+    <columns xmi:id="_-jMubo0CEemMRMEnnNEWIQ" name="email" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-jMub40CEemMRMEnnNEWIQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="191"/>
+    </columns>
+    <columns xmi:id="_-jMucI0CEemMRMEnnNEWIQ" name="email_verified_at" description="">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_-jMucY0CEemMRMEnnNEWIQ" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xmi:id="_-jMuco0CEemMRMEnnNEWIQ" name="password" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-jMuc40CEemMRMEnnNEWIQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="191"/>
+    </columns>
+    <columns xmi:id="_-jMudI0CEemMRMEnnNEWIQ" name="remember_token" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-jMudY0CEemMRMEnnNEWIQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xmi:id="_-jMudo0CEemMRMEnnNEWIQ" name="created_at" description="">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_-jMud40CEemMRMEnnNEWIQ" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xmi:id="_-jMueI0CEemMRMEnnNEWIQ" name="updated_at" description="">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_-jMueY0CEemMRMEnnNEWIQ" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_-jMueo0CEemMRMEnnNEWIQ" name="PRIMARY" members="_-jMuao0CEemMRMEnnNEWIQ"/>
+  </SQLTables:PersistentTable>
+  <SQLTables:PersistentTable xmi:id="_-jN8gI0CEemMRMEnnNEWIQ" name="books" schema="_-jMHUI0CEemMRMEnnNEWIQ">
+    <columns xmi:id="_-jN8gY0CEemMRMEnnNEWIQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_-jN8go0CEemMRMEnnNEWIQ" name="BIGINT UNSIGNED" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="_-jN8g40CEemMRMEnnNEWIQ" name="book_name" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-jN8hI0CEemMRMEnnNEWIQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="191"/>
+    </columns>
+    <columns xmi:id="_-jN8hY0CEemMRMEnnNEWIQ" name="isbn_no" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-jN8ho0CEemMRMEnnNEWIQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="191"/>
+    </columns>
+    <columns xmi:id="_-jN8h40CEemMRMEnnNEWIQ" name="book_price" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_-jN8iI0CEemMRMEnnNEWIQ" name="INT" primitiveType="INTEGER"/>
+    </columns>
+    <columns xmi:id="_-jN8iY0CEemMRMEnnNEWIQ" name="created_at" description="">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_-jN8io0CEemMRMEnnNEWIQ" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xmi:id="_-jN8i40CEemMRMEnnNEWIQ" name="updated_at" description="">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_-jN8jI0CEemMRMEnnNEWIQ" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_-jN8jY0CEemMRMEnnNEWIQ" name="PRIMARY" members="_-jN8gY0CEemMRMEnnNEWIQ"/>
+  </SQLTables:PersistentTable>
+  <SQLTables:PersistentTable xmi:id="_-jN8jo0CEemMRMEnnNEWIQ" name="migrations" schema="_-jMHUI0CEemMRMEnnNEWIQ">
+    <columns xmi:id="_-jN8j40CEemMRMEnnNEWIQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_-jN8kI0CEemMRMEnnNEWIQ" name="INTEGER UNSIGNED" primitiveType="INTEGER"/>
+    </columns>
+    <columns xmi:id="_-jN8kY0CEemMRMEnnNEWIQ" name="migration" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_-jN8ko0CEemMRMEnnNEWIQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="191"/>
+    </columns>
+    <columns xmi:id="_-jN8k40CEemMRMEnnNEWIQ" name="batch" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_-jN8lI0CEemMRMEnnNEWIQ" name="INT" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_-jN8lY0CEemMRMEnnNEWIQ" name="PRIMARY" members="_-jN8j40CEemMRMEnnNEWIQ"/>
+  </SQLTables:PersistentTable>
+</xmi:XMI>

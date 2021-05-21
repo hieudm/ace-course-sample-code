@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <inlinedXMLSchema><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">   
+                               <xsd:element name="customerid" type="xsd:int"/> 
+</xsd:schema>]]></inlinedXMLSchema>
+    <input path="/test/test/test.xsd" var="var3"/>
+    <input path="db:database(/test.dbm,test,db:schema-tables(test,coffeeshop))" var="test1"/>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var4"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var5"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var2"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://test/test"/>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="getDbquery_Mapping">
+        <input path="$test1/db:select(fn:false(),ResultSet(test/coffeeshop/name,test/coffeeshop/address,test/coffeeshop/manager,test/coffeeshop/id),db:where('test.coffeeshop.id =   ?','?'=$MessageAssembly1/LocalEnvironment/HTTP/Input/QueryString//customerid))" var="dbselect"/>
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var4/mb:msg(JSON,assembly,JSON,LocalEnvironment,Properties)" var="MessageAssembly1">
+            <cast castType="userDefined" path="$MessageAssembly1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var4"/>
+            <cast castType="userDefined" path="$MessageAssembly1/LocalEnvironment/HTTP/Input/QueryString/any" qualifier="customerid" ref="var5"/>
+        </input>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var2/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly">
+            <cast castType="userDefined" path="$MessageAssembly/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var2"/>
+            <cast path="$MessageAssembly/JSON/spath('Data',2)/any" qualifier="{http://test/test}coffeeshop" ref="var3"/>
+        </output>
+        <select ref="dbselect">
+            <input path="$dbselect/ResultSet[1]"/>
+            <output path="$MessageAssembly/JSON/spath('Data',2)/coffeeshop"/>
+            <move>
+                <input path="test/coffeeshop/name"/>
+                <output path="name"/>
+            </move>
+            <move>
+                <input path="test/coffeeshop/address"/>
+                <output path="address"/>
+            </move>
+            <move>
+                <input path="test/coffeeshop/manager"/>
+                <output path="manager"/>
+            </move>
+            <move>
+                <input path="test/coffeeshop/id"/>
+                <output path="id"/>
+            </move>
+        </select>
+        <task type="todo">
+            <input path="$MessageAssembly1/."/>
+        </task>
+        <move>
+            <input path="$MessageAssembly1/Properties"/>
+            <output path="$MessageAssembly/Properties"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

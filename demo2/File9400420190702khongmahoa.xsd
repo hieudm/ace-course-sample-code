@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="omittedNamespace" xmlns:Q1="omittedNamespace">
+  <xsd:element name="MA_LYDO_VVIEN" type="xsd:string"/>
+  <xsd:element name="HOSO" type="Q1:HOSOType"/>
+  <xsd:element name="MA_THE" type="xsd:string"/>
+  <xsd:element name="GOI_VTYT" type="xsd:string"/>
+  <xsd:element name="MA_PTTT_QT">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="NGAY_VAO" type="xsd:string"/>
+  <xsd:element name="CAN_NANG" type="xsd:string"/>
+  <xsd:element name="MA_THUOC" type="xsd:string"/>
+  <xsd:element name="DANHSACHHOSO" type="Q1:DANHSACHHOSOType"/>
+  <xsd:element name="SO_DANG_KY">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="HAM_LUONG">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="MA_BN" type="xsd:string"/>
+  <xsd:element name="MA_BENH" type="xsd:string"/>
+  <xsd:element name="STT" type="xsd:string"/>
+  <xsd:element name="T_BNCCT" type="xsd:string"/>
+  <xsd:element name="MA_BAC_SI" type="xsd:string"/>
+  <xsd:element name="TEN_THUOC">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="SO_NGAY_DTRI" type="xsd:string"/>
+  <xsd:element name="TYLE_TT" type="xsd:string"/>
+  <xsd:element name="MA_KHUVUC" type="xsd:string"/>
+  <xsd:element name="MIEN_CUNG_CT">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="NGAYLAP" type="xsd:string"/>
+  <xsd:element name="GIOI_TINH" type="xsd:string"/>
+  <xsd:element name="MUC_HUONG" type="xsd:string"/>
+  <xsd:element name="MA_TAI_NAN" type="xsd:string"/>
+  <xsd:element name="T_THUOC" type="xsd:string"/>
+  <xsd:element name="HO_TEN">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="PHAM_VI" type="xsd:string"/>
+  <xsd:element name="CHUKYDONVI">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="KET_QUA_DTRI" type="xsd:string"/>
+  <xsd:element name="MA_VAT_TU" type="xsd:string"/>
+  <xsd:element name="MA_CSKCB" type="xsd:string"/>
+  <xsd:element name="DSACH_CHI_TIET_DVKT" type="Q1:DSACH_CHI_TIET_DVKTType"/>
+  <xsd:element name="MA_KHOA" type="xsd:string"/>
+  <xsd:element name="MA_LOAI_KCB" type="xsd:string"/>
+  <xsd:element name="THANH_TIEN" type="xsd:string"/>
+  <xsd:element name="NGAY_KQ" type="xsd:string"/>
+  <xsd:element name="DON_VI_TINH" type="xsd:string"/>
+  <xsd:element name="TONG_HOP" type="Q1:TONG_HOPType"/>
+  <xsd:element name="TT_THAU">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="MA_PTTT" type="xsd:string"/>
+  <xsd:element name="MA_GIUONG" type="xsd:string"/>
+  <xsd:element name="THANG_QT" type="xsd:string"/>
+  <xsd:element name="FILEHOSO" type="Q1:FILEHOSOType"/>
+  <xsd:element name="T_NGOAIDS" type="xsd:string"/>
+  <xsd:element name="MA_NOI_CHUYEN" type="xsd:string"/>
+  <xsd:element name="MA_DKBD" type="xsd:string"/>
+  <xsd:element name="DUONG_DUNG" type="xsd:string"/>
+  <xsd:element name="THONGTINHOSO" type="Q1:THONGTINHOSOType"/>
+  <xsd:element name="MA_LK" type="xsd:string"/>
+  <xsd:element name="CHI_TIET_THUOC" type="Q1:CHI_TIET_THUOCType"/>
+  <xsd:element name="DIA_CHI">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="CHI_TIET_DVKT" type="Q1:CHI_TIET_DVKTType"/>
+  <xsd:element name="GIAMDINHHS" type="Q1:GIAMDINHHSType"/>
+  <xsd:element name="NAM_QT" type="xsd:string"/>
+  <xsd:element name="TEN_BENH">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="NGAY_TTOAN" type="xsd:string"/>
+  <xsd:element name="MA_DICH_VU" type="xsd:string"/>
+  <xsd:element name="NGAY_SINH" type="xsd:string"/>
+  <xsd:element name="T_VTYT" type="xsd:string"/>
+  <xsd:element name="T_BHTT" type="xsd:string"/>
+  <xsd:element name="MA_BENHKHAC" type="xsd:string"/>
+  <xsd:element name="MACSKCB" type="xsd:string"/>
+  <xsd:element name="T_BNTT" type="xsd:string"/>
+  <xsd:element name="LIEU_DUNG">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="T_NGUONKHAC" type="xsd:string"/>
+  <xsd:element name="MA_NHOM" type="xsd:string"/>
+  <xsd:element name="NGAY_YL" type="xsd:string"/>
+  <xsd:element name="TEN_VAT_TU">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="TINH_TRANG_RV" type="xsd:string"/>
+  <xsd:element name="DSACH_CHI_TIET_THUOC" type="Q1:DSACH_CHI_TIET_THUOCType"/>
+  <xsd:element name="DON_GIA" type="xsd:string"/>
+  <xsd:element name="GT_THE_DEN" type="xsd:string"/>
+  <xsd:element name="NOIDUNGFILE" type="Q1:NOIDUNGFILEType"/>
+  <xsd:element name="T_TONGCHI" type="xsd:string"/>
+  <xsd:element name="SOLUONGHOSO" type="xsd:string"/>
+  <xsd:element name="NGAY_RA" type="xsd:string"/>
+  <xsd:element name="LOAIHOSO" type="xsd:string"/>
+  <xsd:element name="TEN_DICH_VU">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="GT_THE_TU" type="xsd:string"/>
+  <xsd:element name="T_TRANTT">
+    <xsd:complexType/>
+  </xsd:element>
+  <xsd:element name="THONGTINDONVI" type="Q1:THONGTINDONVIType"/>
+  <xsd:element name="SO_LUONG" type="xsd:string"/>
+  <xsd:complexType name="HOSOType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" ref="Q1:FILEHOSO"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DANHSACHHOSOType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" ref="Q1:HOSO"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DSACH_CHI_TIET_DVKTType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" ref="Q1:CHI_TIET_DVKT"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TONG_HOPType">
+    <xsd:sequence>
+      <xsd:element ref="Q1:MA_LK"/>
+      <xsd:element ref="Q1:STT"/>
+      <xsd:element ref="Q1:MA_BN"/>
+      <xsd:element ref="Q1:HO_TEN"/>
+      <xsd:element ref="Q1:NGAY_SINH"/>
+      <xsd:element ref="Q1:GIOI_TINH"/>
+      <xsd:element ref="Q1:DIA_CHI"/>
+      <xsd:element ref="Q1:MA_THE"/>
+      <xsd:element ref="Q1:MA_DKBD"/>
+      <xsd:element ref="Q1:GT_THE_TU"/>
+      <xsd:element ref="Q1:GT_THE_DEN"/>
+      <xsd:element ref="Q1:MIEN_CUNG_CT"/>
+      <xsd:element ref="Q1:TEN_BENH"/>
+      <xsd:element ref="Q1:MA_BENH"/>
+      <xsd:element ref="Q1:MA_BENHKHAC"/>
+      <xsd:element ref="Q1:MA_LYDO_VVIEN"/>
+      <xsd:element ref="Q1:MA_NOI_CHUYEN"/>
+      <xsd:element ref="Q1:MA_TAI_NAN"/>
+      <xsd:element ref="Q1:NGAY_VAO"/>
+      <xsd:element ref="Q1:NGAY_RA"/>
+      <xsd:element ref="Q1:SO_NGAY_DTRI"/>
+      <xsd:element ref="Q1:KET_QUA_DTRI"/>
+      <xsd:element ref="Q1:TINH_TRANG_RV"/>
+      <xsd:element ref="Q1:NGAY_TTOAN"/>
+      <xsd:element ref="Q1:T_THUOC"/>
+      <xsd:element ref="Q1:T_VTYT"/>
+      <xsd:element ref="Q1:T_TONGCHI"/>
+      <xsd:element ref="Q1:T_BNTT"/>
+      <xsd:element ref="Q1:T_BNCCT"/>
+      <xsd:element ref="Q1:T_BHTT"/>
+      <xsd:element ref="Q1:T_NGUONKHAC"/>
+      <xsd:element ref="Q1:T_NGOAIDS"/>
+      <xsd:element ref="Q1:NAM_QT"/>
+      <xsd:element ref="Q1:THANG_QT"/>
+      <xsd:element ref="Q1:MA_LOAI_KCB"/>
+      <xsd:element ref="Q1:MA_KHOA"/>
+      <xsd:element ref="Q1:MA_CSKCB"/>
+      <xsd:element ref="Q1:MA_KHUVUC"/>
+      <xsd:element ref="Q1:MA_PTTT_QT"/>
+      <xsd:element ref="Q1:CAN_NANG"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FILEHOSOType">
+    <xsd:sequence>
+      <xsd:element ref="Q1:LOAIHOSO"/>
+      <xsd:element ref="Q1:NOIDUNGFILE"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="THONGTINHOSOType">
+    <xsd:sequence>
+      <xsd:element ref="Q1:NGAYLAP"/>
+      <xsd:element ref="Q1:SOLUONGHOSO"/>
+      <xsd:element ref="Q1:DANHSACHHOSO"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CHI_TIET_THUOCType">
+    <xsd:sequence>
+      <xsd:element ref="Q1:MA_LK"/>
+      <xsd:element ref="Q1:STT"/>
+      <xsd:element ref="Q1:MA_THUOC"/>
+      <xsd:element ref="Q1:MA_NHOM"/>
+      <xsd:element ref="Q1:TEN_THUOC"/>
+      <xsd:element ref="Q1:DON_VI_TINH"/>
+      <xsd:element ref="Q1:HAM_LUONG"/>
+      <xsd:element ref="Q1:DUONG_DUNG"/>
+      <xsd:element ref="Q1:LIEU_DUNG"/>
+      <xsd:element ref="Q1:SO_DANG_KY"/>
+      <xsd:element ref="Q1:TT_THAU"/>
+      <xsd:element ref="Q1:PHAM_VI"/>
+      <xsd:element ref="Q1:SO_LUONG"/>
+      <xsd:element ref="Q1:DON_GIA"/>
+      <xsd:element ref="Q1:TYLE_TT"/>
+      <xsd:element ref="Q1:THANH_TIEN"/>
+      <xsd:element ref="Q1:MUC_HUONG"/>
+      <xsd:element ref="Q1:T_NGUONKHAC"/>
+      <xsd:element ref="Q1:T_BNTT"/>
+      <xsd:element ref="Q1:T_BHTT"/>
+      <xsd:element ref="Q1:T_BNCCT"/>
+      <xsd:element ref="Q1:T_NGOAIDS"/>
+      <xsd:element ref="Q1:MA_KHOA"/>
+      <xsd:element ref="Q1:MA_BAC_SI"/>
+      <xsd:element ref="Q1:MA_BENH"/>
+      <xsd:element ref="Q1:NGAY_YL"/>
+      <xsd:element ref="Q1:MA_PTTT"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CHI_TIET_DVKTType">
+    <xsd:sequence>
+      <xsd:element ref="Q1:MA_LK"/>
+      <xsd:element ref="Q1:STT"/>
+      <xsd:element ref="Q1:MA_DICH_VU"/>
+      <xsd:element ref="Q1:MA_VAT_TU"/>
+      <xsd:element ref="Q1:MA_NHOM"/>
+      <xsd:element ref="Q1:GOI_VTYT"/>
+      <xsd:element ref="Q1:TEN_VAT_TU"/>
+      <xsd:element ref="Q1:TEN_DICH_VU"/>
+      <xsd:element ref="Q1:DON_VI_TINH"/>
+      <xsd:element ref="Q1:PHAM_VI"/>
+      <xsd:element ref="Q1:SO_LUONG"/>
+      <xsd:element ref="Q1:DON_GIA"/>
+      <xsd:element ref="Q1:TT_THAU"/>
+      <xsd:element ref="Q1:TYLE_TT"/>
+      <xsd:element ref="Q1:THANH_TIEN"/>
+      <xsd:element ref="Q1:T_TRANTT"/>
+      <xsd:element ref="Q1:MUC_HUONG"/>
+      <xsd:element ref="Q1:T_NGUONKHAC"/>
+      <xsd:element ref="Q1:T_BNTT"/>
+      <xsd:element ref="Q1:T_BHTT"/>
+      <xsd:element ref="Q1:T_BNCCT"/>
+      <xsd:element ref="Q1:T_NGOAIDS"/>
+      <xsd:element ref="Q1:MA_KHOA"/>
+      <xsd:element ref="Q1:MA_GIUONG"/>
+      <xsd:element ref="Q1:MA_BAC_SI"/>
+      <xsd:element ref="Q1:MA_BENH"/>
+      <xsd:element ref="Q1:NGAY_YL"/>
+      <xsd:element ref="Q1:MA_PTTT"/>
+      <xsd:element ref="Q1:NGAY_KQ"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GIAMDINHHSType">
+    <xsd:sequence>
+      <xsd:element ref="Q1:THONGTINDONVI"/>
+      <xsd:element ref="Q1:THONGTINHOSO"/>
+      <xsd:element ref="Q1:CHUKYDONVI"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DSACH_CHI_TIET_THUOCType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" ref="Q1:CHI_TIET_THUOC"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="NOIDUNGFILEType">
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element minOccurs="0" ref="Q1:DSACH_CHI_TIET_DVKT"/>
+        <xsd:element minOccurs="0" ref="Q1:TONG_HOP"/>
+        <xsd:element minOccurs="0" ref="Q1:DSACH_CHI_TIET_THUOC"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="THONGTINDONVIType">
+    <xsd:sequence>
+      <xsd:element ref="Q1:MACSKCB"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

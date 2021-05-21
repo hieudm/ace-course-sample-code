@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore" xmlns:SQLTables="http:///org/eclipse/datatools/modelbase/sql/tables.ecore">
+  <SQLSchema:Database xmi:id="_D9xpwLOeEeurvMGanHT-Xg" name="test" vendor="MySql" version="5.1" schemas="_EAveMLOeEeurvMGanHT-Xg">
+    <eAnnotations xmi:id="_D9xpwbOeEeurvMGanHT-Xg" source="ConnectionURI">
+      <details xmi:id="_D9xpwrOeEeurvMGanHT-Xg" key="ConnectionKey" value="test"/>
+    </eAnnotations>
+  </SQLSchema:Database>
+  <SQLSchema:Schema xmi:id="_EAveMLOeEeurvMGanHT-Xg" name="test" tables="_EAyhgLOeEeurvMGanHT-Xg _EA2L4LOeEeurvMGanHT-Xg" database="_D9xpwLOeEeurvMGanHT-Xg"/>
+  <SQLTables:PersistentTable xmi:id="_EAyhgLOeEeurvMGanHT-Xg" name="coffeeshop" schema="_EAveMLOeEeurvMGanHT-Xg">
+    <columns xmi:id="_EAyhgbOeEeurvMGanHT-Xg" name="name" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EAyhgrOeEeurvMGanHT-Xg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_EAyhg7OeEeurvMGanHT-Xg" name="address" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EAyhhLOeEeurvMGanHT-Xg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_EAyhhbOeEeurvMGanHT-Xg" name="manager" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EAyhhrOeEeurvMGanHT-Xg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_EAyhh7OeEeurvMGanHT-Xg" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_EAyhiLOeEeurvMGanHT-Xg" name="INT" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_EAyhibOeEeurvMGanHT-Xg" name="PRIMARY" members="_EAyhh7OeEeurvMGanHT-Xg"/>
+  </SQLTables:PersistentTable>
+  <SQLTables:PersistentTable xmi:id="_EA2L4LOeEeurvMGanHT-Xg" name="pqeuser" schema="_EAveMLOeEeurvMGanHT-Xg">
+    <columns xmi:id="_EA2L4bOeEeurvMGanHT-Xg" name="fullName" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EA2L4rOeEeurvMGanHT-Xg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_EA2L47OeEeurvMGanHT-Xg" name="username" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EA2L5LOeEeurvMGanHT-Xg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_EA2L5bOeEeurvMGanHT-Xg" name="realm" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EA2L5rOeEeurvMGanHT-Xg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_EA2L57OeEeurvMGanHT-Xg" name="email" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EA2L6LOeEeurvMGanHT-Xg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_EA2L6bOeEeurvMGanHT-Xg" name="password" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EA2L6rOeEeurvMGanHT-Xg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_EA2L67OeEeurvMGanHT-Xg" name="emailVerified" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_EA2L7LOeEeurvMGanHT-Xg" name="BIT" primitiveType="SMALLINT"/>
+    </columns>
+    <columns xmi:id="_EA2L7bOeEeurvMGanHT-Xg" name="verificationToken" description="" nullable="false" defaultValue="test">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_EA2L7rOeEeurvMGanHT-Xg" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="500"/>
+    </columns>
+    <columns xmi:id="_EA2L77OeEeurvMGanHT-Xg" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_EA2L8LOeEeurvMGanHT-Xg" name="INT" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_EA2L8bOeEeurvMGanHT-Xg" name="PRIMARY" members="_EA2L77OeEeurvMGanHT-Xg"/>
+  </SQLTables:PersistentTable>
+</xmi:XMI>

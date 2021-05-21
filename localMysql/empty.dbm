@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore" xmlns:SQLTables="http:///org/eclipse/datatools/modelbase/sql/tables.ecore">
+  <SQLSchema:Database xmi:id="_AviF8LFKEeu1pIWbD7BGdg" name="Database" vendor="MySql" version="5.1" schemas="_AyJ8ILFKEeu1pIWbD7BGdg"/>
+  <SQLSchema:Schema xmi:id="_AyJ8ILFKEeu1pIWbD7BGdg" name="Schema" tables="_CztkMLFKEeu1pIWbD7BGdg _D2QmULFKEeu1pIWbD7BGdg" database="_AviF8LFKEeu1pIWbD7BGdg"/>
+  <SQLTables:PersistentTable xmi:id="_CztkMLFKEeu1pIWbD7BGdg" name="customer" schema="_AyJ8ILFKEeu1pIWbD7BGdg"/>
+  <SQLTables:PersistentTable xmi:id="_D2QmULFKEeu1pIWbD7BGdg" name="test" schema="_AyJ8ILFKEeu1pIWbD7BGdg"/>
+</xmi:XMI>

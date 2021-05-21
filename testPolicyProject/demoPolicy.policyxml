@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policies>
+  <policy policyType="UserDefined" policyName="demoPolicy" policyTemplate="UserDefined">
+    <data>Helloworld lan deploy thu 3</data>
+  </policy>
+</policies>

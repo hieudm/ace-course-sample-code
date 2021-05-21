@@ -1,0 +1,3 @@
+      helloworld#additionalInstances = 20
+      helloworld#HTTP Input.URLSpecifier = /hello2
+      UnitTest.db1Test#HTTP Input.URLSpecifier = /db1test

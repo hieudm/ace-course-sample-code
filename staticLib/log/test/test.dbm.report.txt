@@ -1,0 +1,19 @@
+
+
+Importing file: C:\Users\OS\IBM\ACET11\workspace\test\test.dbm
+
+
+Processing schema test.
+Creating complex type for table coffeeshop.
+Creating global element for table coffeeshop.
+Creating complex type for table pqeuser.
+Creating global element for table pqeuser.
+Creating file \staticLib\test\test\test.xsd in the workspace.
+
+Elapsed time processing this message definition file: 2.737 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

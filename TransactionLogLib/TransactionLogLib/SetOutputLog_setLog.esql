@@ -1,0 +1,40 @@
+BROKER SCHEMA TransactionLogLib
+
+
+CREATE COMPUTE MODULE SetOutputLog_setLog
+	DECLARE serverIP EXTERNAL CHARACTER ;
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyMessageHeaders();
+		if Environment.processingTime is not NULL then
+			Set Environment.processingTime = CAST((CAST(CURRENT_TIMESTAMP AS TIMESTAMP)-Environment.startTime) SECOND as FLOAT);
+			Set OutputRoot.JSON.Data.processingtime = Environment.processingTime;
+		end if;
+		Set Environment.processingTime = 0;
+		Set Environment.startTime = CAST(CURRENT_TIMESTAMP AS TIMESTAMP); 
+		Set OutputRoot.JSON.Data.serviceDomain = Environment.serviceDomain;
+		Set OutputRoot.JSON.Data.operatorName = Environment.operatorName;
+		Set OutputRoot.JSON.Data.stepName = Environment.stepName;
+		Set OutputRoot.JSON.Data.pRefNum = Environment.pRefNum;
+		Set OutputRoot.JSON.Data.cRefNum = Environment.cRefNum;
+		Set OutputRoot.JSON.Data.data = Environment.input;
+		Set OutputRoot.JSON.Data.logTime =CAST(CURRENT_TIMESTAMP AS CHARACTER FORMAT 'yyyy-MM-dd''T''HH:mm:ss.SSSZZZ');
+		Set OutputRoot.JSON.Data.serverIP = serverIP;
+		-- CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

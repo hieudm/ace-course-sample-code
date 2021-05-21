@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <inlinedXMLSchema><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+    <xsd:element name="cacheData" nillable="true" type="xsd:string"/> 
+</xsd:schema>]]></inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/msl/mapping/cache/xsds/cache.xsd" var="var2"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var3"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <output path="jar:file://!com/ibm/msl/mapping/cache/xsds/cache.xsd" var="var1"/>
+    <output path="jar:file://!com/ibm/msl/mapping/cache/xsds/cache.xsd" var="var4"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="extension" prefix="fn" uri="http://www.w3.org/2005/xpath-functions"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="readPolicy_Mapping">
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)">
+            <cast castType="userDefined" path="JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var"/>
+            <cast castType="userDefined" path="JSON/spath('Data',2)/any" qualifier="cacheData" ref="var3"/>
+        </output>
+        <transaction>
+            <cacheGet>
+                <output path="$var1/CacheGet"/>
+                <assign value="data">
+                    <output path="Key"/>
+                </assign>
+            </cacheGet>
+            <cacheReturn>
+                <input path="$var2/CacheGetReturn" var="CacheGetReturn1"/>
+                <output path="JSON/spath('Data',2)/cacheData"/>
+                <condition>
+                    <if>
+                        <input path="$CacheGetReturn1/Value" var="Value"/>
+                        <output path="."/>
+                        <test lang="xpath">fn:empty( $Value)</test>
+                        <cachePut>
+                            <input path="$Value/."/>
+                            <output path="$var4/CachePut"/>
+                            <assign value="data">
+                                <output path="Key"/>
+                            </assign>
+                            <assign value="myCachedData">
+                                <output path="Value"/>
+                            </assign>
+                        </cachePut>
+                        <assign value="new Data and it's not cached">
+                            <output path="."/>
+                        </assign>
+                    </if>
+                    <else>
+                        <input path="$CacheGetReturn1/." var="CacheGetReturn"/>
+                        <output path="."/>
+                        <function ref="fn:concat">
+                            <input path="$CacheGetReturn/Value" var="Value1"/>
+                            <output path="."/>
+                            <param name="string1" value="$Value1"/>
+                            <param name="string2" value="'- cached data'"/>
+                        </function>
+                    </else>
+                </condition>
+            </cacheReturn>
+        </transaction>
+    </mappingDeclaration>
+</mappingRoot>

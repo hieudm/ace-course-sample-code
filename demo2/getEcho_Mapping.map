@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/BlobMessage.xsd" var="var2"/>
+    <input path="db:database(/{hieudm}hieudm.dbm,msl:db-name('{hieudm}:hieudm'),db:schema-tables(hieudm,books))" var="hieudmhieudm"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <output derivedFrom="MB:JSON_schema_in_swagger_document" path="/swagger.json" var="var1"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="getEcho_Mapping">
+        <input derivedFrom="MB:JSON_operation_name:getEcho" path="$var2/mb:msg(BLOB,assembly,BLOB,Properties,LocalEnvironment)" var="ComIbmMessageAssembly_BLOB"/>
+        <input path="$hieudmhieudm/db:select(fn:false(),ResultSet(hieudm/books/id,hieudm/books/book_name,hieudm/books/isbn_no,hieudm/books/book_price,hieudm/books/created_at,hieudm/books/updated_at),db:where('1=1'))" var="dbselect"/>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties,HTTPResponseHeader)" var="ComIbmMessageAssembly_JSON">
+            <cast derivedFrom="MB:JSON_operation_response" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}echo-out" ref="var1"/>
+        </output>
+        <move>
+            <input path="$ComIbmMessageAssembly_BLOB/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON/Properties"/>
+        </move>
+        <task type="info">
+            <documentation description="The REST API input data of operation getEcho.">This Task is provided to show the location of the REST API input data of operation getEcho.
+The path and query parameters are provided under "Parameters".
+You may need to use these as inputs to your mappings.</documentation>
+            <input path="$ComIbmMessageAssembly_BLOB/LocalEnvironment/REST/Input"/>
+        </task>
+        <assign value="09">
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/code"/>
+        </assign>
+        <assign value="hello world">
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/message"/>
+        </assign>
+        <select ref="dbselect">
+            <input path="$dbselect/ResultSet"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/data/Item"/>
+            <foreach>
+                <input path="."/>
+                <output path="."/>
+                <move>
+                    <input path="hieudm/books/book_name"/>
+                    <output path="bookName"/>
+                </move>
+            </foreach>
+        </select>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,31 @@
+
+
+Importing file: C:\Users\OS\IBM\ACET11\workspace\demows\demows.wsdl
+
+
+The following is a list of WS-I warning messages found when importing:
+XSD: The location 'test/test/test.xsd' has not been resolved because the import is unused, Line: 17, Column: 13
+
+
+The WSDL import will proceed with bindings demowsHttpBinding.
+Creating wsdl schema document for file:///C:/Users/OS/IBM/ACET11/workspace/demows/demows.wsdl.
+Parsing wsdl binding {http://demows}demowsHttpBinding.
+Parsing wsdl binding input dbquery.
+Parsing wsdl binding output dbquery.
+Parsing wsdl binding input add.
+Parsing wsdl binding output add.
+Processing doc style for operation dbquery.
+Processing doc style for operation add.
+Populating WSDL schema demows.xsd.
+Creating file demows.xsd in the workspace.
+Creating file /demoRest/demoRest/test/test/test.xsd in the workspace.
+Creating file /demoRest/demows_InlineSchema1.xsd in the workspace.
+Copying source WSDL demows.wsdl to demows.wsdl.
+
+Elapsed time processing this message definition file: 0.215 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

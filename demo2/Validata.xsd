@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="APR" type="xsd:string"/>
+  <xsd:element name="year" type="xsd:string"/>
+  <xsd:element name="applicant_data" type="applicant_dataType"/>
+  <xsd:element name="contract_fed_align" type="xsd:string"/>
+  <xsd:element name="type" type="xsd:string"/>
+  <xsd:element name="model" type="xsd:string"/>
+  <xsd:element name="app1_sign_contract" type="xsd:string"/>
+  <xsd:element name="contract_state" type="xsd:string"/>
+  <xsd:element name="vehicle_data" type="vehicle_dataType"/>
+  <xsd:element name="contract_fed_complete" type="xsd:string"/>
+  <xsd:element name="app1_title_name" type="xsd:string"/>
+  <xsd:element name="insurance_data" type="insurance_dataType"/>
+  <xsd:element name="allowance" type="xsd:string"/>
+  <xsd:element name="creation_date" type="xsd:string"/>
+  <xsd:element name="lender_specific_1" type="lender_specific_1Type"/>
+  <xsd:element name="app1_contract_address" type="xsd:string"/>
+  <xsd:element name="lender_value_7" type="xsd:string"/>
+  <xsd:element name="lender_specific_7" type="lender_specific_7Type"/>
+  <xsd:element name="cash_down" type="xsd:string"/>
+  <xsd:element name="lender_value_8" type="xsd:string"/>
+  <xsd:element name="lender_specific_6" type="lender_specific_6Type"/>
+  <xsd:element name="lender_value_5" type="xsd:string"/>
+  <xsd:element name="lender_specific_9" type="lender_specific_9Type"/>
+  <xsd:element name="lender_value_6" type="xsd:string"/>
+  <xsd:element name="lender_specific_8" type="lender_specific_8Type"/>
+  <xsd:element name="lender_value_3" type="xsd:string"/>
+  <xsd:element name="lender_specific_3" type="lender_specific_3Type"/>
+  <xsd:element name="lender_value_4" type="xsd:string"/>
+  <xsd:element name="lender_specific_2" type="lender_specific_2Type"/>
+  <xsd:element name="lender_value_1" type="xsd:string"/>
+  <xsd:element name="lender_specific_5" type="lender_specific_5Type"/>
+  <xsd:element name="lender_value_2" type="xsd:string"/>
+  <xsd:element name="lender_specific_4" type="lender_specific_4Type"/>
+  <xsd:element name="image_id_01" type="xsd:string"/>
+  <xsd:element name="image_id_03" type="xsd:string"/>
+  <xsd:element name="image_id_02" type="xsd:string"/>
+  <xsd:element name="image_id_05" type="xsd:string"/>
+  <xsd:element name="image_id_04" type="xsd:string"/>
+  <xsd:element name="image_id_07" type="xsd:string"/>
+  <xsd:element name="image_id_06" type="xsd:string"/>
+  <xsd:element name="image_id_09" type="xsd:string"/>
+  <xsd:element name="image_id_08" type="xsd:string"/>
+  <xsd:element name="application_sign_app" type="xsd:string"/>
+  <xsd:element name="verify" type="verifyType"/>
+  <xsd:element name="term" type="xsd:string"/>
+  <xsd:element name="image_id_10" type="xsd:string"/>
+  <xsd:element name="image_id_12" type="xsd:string"/>
+  <xsd:element name="image_id_11" type="xsd:string"/>
+  <xsd:element name="trade_data" type="trade_dataType"/>
+  <xsd:element name="image_id_14" type="xsd:string"/>
+  <xsd:element name="image_id_13" type="xsd:string"/>
+  <xsd:element name="lender_verification_25" type="xsd:string"/>
+  <xsd:element name="image_id_15" type="xsd:string"/>
+  <xsd:element name="lender_verification_26" type="xsd:string"/>
+  <xsd:element name="lender_verification_27" type="xsd:string"/>
+  <xsd:element name="last_name" type="xsd:string"/>
+  <xsd:element name="total_pages" type="xsd:string"/>
+  <xsd:element name="finance_data" type="finance_dataType"/>
+  <xsd:element name="lender_specific_10" type="lender_specific_10Type"/>
+  <xsd:element name="dealer" type="xsd:string"/>
+  <xsd:element name="lender_VIN_01" type="xsd:string"/>
+  <xsd:element name="dealer_sign_contract" type="xsd:string"/>
+  <xsd:element name="applicant_data_1" type="applicant_data_1Type"/>
+  <xsd:element name="lender_verification_10" type="xsd:string"/>
+  <xsd:element name="lender_verification_11" type="xsd:string"/>
+  <xsd:element name="lender_verification_13" type="xsd:string"/>
+  <xsd:element name="lender_verification_15" type="xsd:string"/>
+  <xsd:element name="lender_verification_16" type="xsd:string"/>
+  <xsd:element name="lender_verification_17" type="xsd:string"/>
+  <xsd:element name="lender_verification_19" type="xsd:string"/>
+  <xsd:element name="contract_revision" type="xsd:string"/>
+  <xsd:element name="contract_origination" type="xsd:string"/>
+  <xsd:element name="mileage" type="xsd:string"/>
+  <xsd:element name="monthly_payment" type="xsd:string"/>
+  <xsd:element name="odometer" type="odometerType"/>
+  <xsd:element name="owing" type="xsd:string"/>
+  <xsd:element name="customer_title" type="xsd:string"/>
+  <xsd:element name="app2_sign_contract" type="xsd:string"/>
+  <xsd:element name="lender_verification_3" type="xsd:string"/>
+  <xsd:element name="license" type="xsd:string"/>
+  <xsd:element name="lender_verification_4" type="xsd:string"/>
+  <xsd:element name="lender_verification_1" type="xsd:string"/>
+  <xsd:element name="lender_verification_2" type="xsd:string"/>
+  <xsd:element name="lender_verification_7" type="xsd:string"/>
+  <xsd:element name="lender_verification_8" type="xsd:string"/>
+  <xsd:element name="lender_verification_5" type="xsd:string"/>
+  <xsd:element name="GAP" type="xsd:string"/>
+  <xsd:element name="lender_verification_6" type="xsd:string"/>
+  <xsd:element name="app2_title_name" type="xsd:string"/>
+  <xsd:element name="lender_verification_9" type="xsd:string"/>
+  <xsd:element name="lender_value_13" type="xsd:string"/>
+  <xsd:element name="lender_value_12" type="xsd:string"/>
+  <xsd:element name="first_payment_date" type="xsd:string"/>
+  <xsd:element name="lender_value_15" type="xsd:string"/>
+  <xsd:element name="coapp_count" type="xsd:string"/>
+  <xsd:element name="contract_fed_modified" type="xsd:string"/>
+  <xsd:element name="customer_type" type="xsd:string"/>
+  <xsd:element name="contract_lienholder" type="xsd:string"/>
+  <xsd:element name="document_type_12" type="xsd:string"/>
+  <xsd:element name="document_type_13" type="xsd:string"/>
+  <xsd:element name="document_type_10" type="xsd:string"/>
+  <xsd:element name="contract_export_data" type="contract_export_dataType"/>
+  <xsd:element name="document_type_11" type="xsd:string"/>
+  <xsd:element name="insurance_sign" type="xsd:string"/>
+  <xsd:element name="title" type="titleType"/>
+  <xsd:element name="loan_type" type="xsd:string"/>
+  <xsd:element name="document_type_14" type="xsd:string"/>
+  <xsd:element name="document_type_15" type="xsd:string"/>
+  <xsd:element name="general_data" type="general_dataType"/>
+  <xsd:element name="contract_form_id" type="xsd:string"/>
+  <xsd:element name="binder_1" type="binder_1Type"/>
+  <xsd:element name="first_name" type="xsd:string"/>
+  <xsd:element name="make" type="xsd:string"/>
+  <xsd:element name="value" type="xsd:string"/>
+  <xsd:element name="customer_lienholder" type="xsd:string"/>
+  <xsd:element name="document_type_09" type="xsd:string"/>
+  <xsd:element name="app1_contract_name" type="xsd:string"/>
+  <xsd:element name="document_type_07" type="xsd:string"/>
+  <xsd:element name="amount" type="xsd:string"/>
+  <xsd:element name="document_type_08" type="xsd:string"/>
+  <xsd:element name="new_used" type="xsd:string"/>
+  <xsd:element name="rebate" type="xsd:string"/>
+  <xsd:element name="document_type_01" type="xsd:string"/>
+  <xsd:element name="document_type_02" type="xsd:string"/>
+  <xsd:element name="document_type_05" type="xsd:string"/>
+  <xsd:element name="document_type_06" type="xsd:string"/>
+  <xsd:element name="document_type_03" type="xsd:string"/>
+  <xsd:element name="document_type_04" type="xsd:string"/>
+  <xsd:element name="vehicle_data_2" type="vehicle_data_2Type"/>
+  <xsd:element name="VIN" type="xsd:string"/>
+  <xsd:element name="customer" type="xsd:string"/>
+  <xsd:complexType name="applicant_dataType">
+    <xsd:sequence>
+      <xsd:element ref="applicant_data_1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="vehicle_dataType">
+    <xsd:sequence>
+      <xsd:element ref="new_used"/>
+      <xsd:element ref="VIN"/>
+      <xsd:element ref="year"/>
+      <xsd:element ref="make"/>
+      <xsd:element ref="model"/>
+      <xsd:element ref="mileage"/>
+      <xsd:element ref="lender_VIN_01"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="insurance_dataType">
+    <xsd:sequence>
+      <xsd:element ref="insurance_sign"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_1Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+      <xsd:element ref="lender_value_2"/>
+      <xsd:element ref="lender_value_3"/>
+      <xsd:element ref="lender_value_4"/>
+      <xsd:element ref="lender_value_5"/>
+      <xsd:element ref="lender_value_6"/>
+      <xsd:element ref="lender_value_7"/>
+      <xsd:element ref="lender_value_8"/>
+      <xsd:element ref="lender_value_12"/>
+      <xsd:element ref="lender_value_13"/>
+      <xsd:element ref="lender_value_15"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_7Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_6Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_9Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_8Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_3Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_2Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+      <xsd:element ref="lender_value_5"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_5Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_4Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="verifyType">
+    <xsd:sequence>
+      <xsd:element ref="app1_sign_contract"/>
+      <xsd:element ref="app2_sign_contract"/>
+      <xsd:element ref="dealer_sign_contract"/>
+      <xsd:element ref="customer_title"/>
+      <xsd:element ref="app1_title_name"/>
+      <xsd:element ref="app2_title_name"/>
+      <xsd:element ref="app1_contract_name"/>
+      <xsd:element ref="app1_contract_address"/>
+      <xsd:element ref="contract_fed_modified"/>
+      <xsd:element ref="contract_fed_align"/>
+      <xsd:element ref="contract_fed_complete"/>
+      <xsd:element ref="contract_lienholder"/>
+      <xsd:element ref="application_sign_app"/>
+      <xsd:element ref="lender_verification_1"/>
+      <xsd:element ref="lender_verification_2"/>
+      <xsd:element ref="lender_verification_3"/>
+      <xsd:element ref="lender_verification_4"/>
+      <xsd:element ref="lender_verification_5"/>
+      <xsd:element ref="lender_verification_6"/>
+      <xsd:element ref="lender_verification_7"/>
+      <xsd:element ref="lender_verification_8"/>
+      <xsd:element ref="lender_verification_9"/>
+      <xsd:element ref="lender_verification_10"/>
+      <xsd:element ref="lender_verification_11"/>
+      <xsd:element ref="lender_verification_13"/>
+      <xsd:element ref="lender_verification_17"/>
+      <xsd:element ref="lender_verification_19"/>
+      <xsd:element ref="lender_verification_25"/>
+      <xsd:element ref="lender_verification_26"/>
+      <xsd:element ref="lender_verification_27"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="trade_dataType">
+    <xsd:sequence>
+      <xsd:element ref="allowance"/>
+      <xsd:element ref="owing"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="finance_dataType">
+    <xsd:sequence>
+      <xsd:element ref="APR"/>
+      <xsd:element ref="term"/>
+      <xsd:element ref="first_payment_date"/>
+      <xsd:element ref="monthly_payment"/>
+      <xsd:element ref="license"/>
+      <xsd:element ref="GAP"/>
+      <xsd:element ref="rebate"/>
+      <xsd:element ref="cash_down"/>
+      <xsd:element ref="value"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lender_specific_10Type">
+    <xsd:sequence>
+      <xsd:element ref="lender_value_1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="applicant_data_1Type">
+    <xsd:sequence>
+      <xsd:element ref="first_name"/>
+      <xsd:element ref="last_name"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="odometerType">
+    <xsd:sequence>
+      <xsd:element ref="mileage"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="contract_export_dataType">
+    <xsd:sequence>
+      <xsd:element ref="general_data"/>
+      <xsd:element ref="applicant_data"/>
+      <xsd:element ref="vehicle_data"/>
+      <xsd:element ref="vehicle_data_2"/>
+      <xsd:element ref="trade_data"/>
+      <xsd:element ref="finance_data"/>
+      <xsd:element ref="insurance_data"/>
+      <xsd:element ref="verify"/>
+      <xsd:element ref="title"/>
+      <xsd:element ref="odometer"/>
+      <xsd:element ref="binder_1"/>
+      <xsd:element ref="lender_specific_1"/>
+      <xsd:element ref="lender_specific_2"/>
+      <xsd:element ref="lender_specific_3"/>
+      <xsd:element ref="lender_specific_4"/>
+      <xsd:element ref="lender_specific_5"/>
+      <xsd:element ref="lender_specific_6"/>
+      <xsd:element ref="lender_specific_7"/>
+      <xsd:element ref="lender_specific_8"/>
+      <xsd:element ref="lender_specific_9"/>
+      <xsd:element ref="lender_specific_10"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="titleType">
+    <xsd:sequence>
+      <xsd:element ref="year"/>
+      <xsd:element ref="make"/>
+      <xsd:element ref="VIN"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="general_dataType">
+    <xsd:sequence>
+      <xsd:element ref="customer"/>
+      <xsd:element ref="dealer"/>
+      <xsd:element ref="contract_state"/>
+      <xsd:element ref="contract_form_id"/>
+      <xsd:element ref="contract_revision"/>
+      <xsd:element ref="contract_origination"/>
+      <xsd:element ref="loan_type"/>
+      <xsd:element ref="customer_type"/>
+      <xsd:element ref="coapp_count"/>
+      <xsd:element ref="total_pages"/>
+      <xsd:element ref="image_id_01"/>
+      <xsd:element ref="document_type_01"/>
+      <xsd:element ref="image_id_02"/>
+      <xsd:element ref="document_type_02"/>
+      <xsd:element ref="image_id_03"/>
+      <xsd:element ref="document_type_03"/>
+      <xsd:element ref="image_id_04"/>
+      <xsd:element ref="document_type_04"/>
+      <xsd:element ref="image_id_05"/>
+      <xsd:element ref="document_type_05"/>
+      <xsd:element ref="image_id_06"/>
+      <xsd:element ref="document_type_06"/>
+      <xsd:element ref="image_id_07"/>
+      <xsd:element ref="document_type_07"/>
+      <xsd:element ref="image_id_08"/>
+      <xsd:element ref="document_type_08"/>
+      <xsd:element ref="image_id_09"/>
+      <xsd:element ref="document_type_09"/>
+      <xsd:element ref="image_id_10"/>
+      <xsd:element ref="document_type_10"/>
+      <xsd:element ref="image_id_11"/>
+      <xsd:element ref="document_type_11"/>
+      <xsd:element ref="image_id_12"/>
+      <xsd:element ref="document_type_12"/>
+      <xsd:element ref="image_id_13"/>
+      <xsd:element ref="document_type_13"/>
+      <xsd:element ref="image_id_14"/>
+      <xsd:element ref="document_type_14"/>
+      <xsd:element ref="image_id_15"/>
+      <xsd:element ref="document_type_15"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="binder_1Type">
+    <xsd:sequence>
+      <xsd:element ref="type"/>
+      <xsd:element ref="amount"/>
+      <xsd:element ref="term"/>
+      <xsd:element ref="mileage"/>
+      <xsd:element ref="creation_date"/>
+      <xsd:element ref="VIN"/>
+      <xsd:element ref="customer_lienholder"/>
+      <xsd:element ref="lender_verification_15"/>
+      <xsd:element ref="lender_verification_16"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="vehicle_data_2Type">
+    <xsd:sequence>
+      <xsd:element ref="VIN"/>
+      <xsd:element ref="year"/>
+      <xsd:element ref="make"/>
+      <xsd:element ref="model"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

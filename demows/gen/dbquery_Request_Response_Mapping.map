@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="gen" version="8.0.5.0" xmlns:map="gen">
+    <input path="/demows_InlineSchema1.xsd" var="var"/>
+    <input path="db:database(/test.dbm,test,db:schema-tables(test,coffeeshop))" var="test"/>
+    <output path="/demows_InlineSchema1.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://demows"/>
+        <namespace kind="supplement" prefix="io2" uri="http://test/test"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="dbquery_Request_Response_Mapping">
+        <input namespace="http://demows" path="$var/mb:msg(dbquery,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_dbquery"/>
+        <input path="$test/db:select(fn:false(),ResultSet(test/coffeeshop/name,test/coffeeshop/address,test/coffeeshop/manager,test/coffeeshop/id),db:where('test.coffeeshop.id =  ?','?'=$ComIbmMessageAssembly_dbquery/io:dbquery/customerid))" var="dbselect"/>
+        <output namespace="http://demows" path="mb:msg(dbqueryResponse,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_dbqueryResponse"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_dbquery/Properties"/>
+            <output path="$ComIbmMessageAssembly_dbqueryResponse/Properties"/>
+        </move>
+        <select ref="dbselect">
+            <input path="$dbselect/ResultSet[1]"/>
+            <output path="$ComIbmMessageAssembly_dbqueryResponse/dbqueryResponse/coffeeshop"/>
+            <move>
+                <input path="test/coffeeshop/name"/>
+                <output path="name"/>
+            </move>
+            <move>
+                <input path="test/coffeeshop/address"/>
+                <output path="address"/>
+            </move>
+            <move>
+                <input path="test/coffeeshop/manager"/>
+                <output path="manager"/>
+            </move>
+            <move>
+                <input path="test/coffeeshop/id"/>
+                <output path="id"/>
+            </move>
+        </select>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input derivedFrom="MB:JSON_schema_in_swagger_document" path="/swagger.json" var="var1"/>
+    <input path="jar:file://!com/ibm/msl/mapping/rdb/xsds/dbreturn.xsd" var="var4"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var2"/>
+    <output derivedFrom="MB:JSON_schema_in_swagger_document" path="/swagger.json" var="var3"/>
+    <output path="db:table(/{hieudm}hieudm.dbm,msl:db-name('{hieudm}:hieudm'),hieudm,books)" var="books"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="extension" prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="putBook_insertbook">
+        <input derivedFrom="MB:JSON_operation_name:putBook" namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties,LocalEnvironment)" var="ComIbmMessageAssembly_JSON">
+            <cast derivedFrom="MB:JSON_operation_request" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONArray_book-in" ref="var1" var="anyType"/>
+        </input>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var2/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON1">
+            <cast derivedFrom="MB:JSON_operation_response" path="$ComIbmMessageAssembly_JSON1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}echo-out" ref="var3" var="anyType1"/>
+        </output>
+        <output path="$books/db:insert(fn:false(),id,book_name,isbn_no,book_price,created_at,updated_at)" var="dbinsert"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON1/Properties"/>
+        </move>
+        <task type="info">
+            <documentation description="The REST API input data of operation putBook.">This Task is provided to show the location of the REST API input data of operation putBook.
+The path and query parameters are provided under "Parameters".
+You may need to use these as inputs to your mappings.</documentation>
+            <input path="$ComIbmMessageAssembly_JSON/LocalEnvironment/REST/Input"/>
+        </task>
+        <foreach>
+            <input path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/Item" var="Item"/>
+            <output path="$dbinsert/."/>
+            <transaction>
+                <insert ref="dbinsert">
+                    <input path="$Item/."/>
+                    <output path="."/>
+                    <move>
+                        <input path="bookname"/>
+                        <output path="book_name"/>
+                    </move>
+                    <move>
+                        <input path="isbn_no"/>
+                        <output path="isbn_no"/>
+                    </move>
+                    <move>
+                        <input path="id"/>
+                        <output path="id"/>
+                    </move>
+                    <move>
+                        <input path="bookprice"/>
+                        <output path="book_price"/>
+                    </move>
+                </insert>
+                <return>
+                    <input path="$var4/DBInsertReturn"/>
+                </return>
+            </transaction>
+        </foreach>
+        <assign value="0">
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/code"/>
+        </assign>
+        <assign value="success">
+            <output path="$ComIbmMessageAssembly_JSON1/JSON/spath('Data',2)/message"/>
+        </assign>
+    </mappingDeclaration>
+</mappingRoot>

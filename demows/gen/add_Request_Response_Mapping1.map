@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="gen" version="8.0.5.0" xmlns:map="gen">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input path="/IBMdefined/test.xsd" var="var2"/>
+    <output path="/demows_InlineSchema1.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="supplement" prefix="out" uri="http://test/test"/>
+        <namespace kind="supplement" prefix="out2" uri="http://demows"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="add_Request_Response_Mapping1">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var"/>
+            <cast path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="coffeeshop" ref="var2"/>
+        </input>
+        <output namespace="http://demows" path="mb:msg(addResponse,assembly,XMLNSC,Properties)" var="MessageAssembly"/>
+        <move>
+            <input path="$ComIbmMessageAssembly_JSON/Properties"/>
+            <output path="$MessageAssembly/Properties"/>
+        </move>
+        <local>
+            <input path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/coffeeshop[1]"/>
+            <output path="$MessageAssembly/addResponse/coffeeshop"/>
+            <move>
+                <input path="name"/>
+                <output path="name"/>
+            </move>
+            <move>
+                <input path="address"/>
+                <output path="address"/>
+            </move>
+            <move>
+                <input path="manager"/>
+                <output path="manager"/>
+            </move>
+            <move>
+                <input path="id"/>
+                <output path="id"/>
+            </move>
+        </local>
+    </mappingDeclaration>
+</mappingRoot>
